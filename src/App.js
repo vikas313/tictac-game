@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Game from './components/Game';
+import Randomquotes from './components/Randomquotes';
+let player1 = prompt("enter your name",'player1')
+let player2 = prompt("enter your name",'player2')
 
 function App() {
+ 
   return (
+    <>
+    <Randomquotes/>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Game player1={player1} player2={player2} />
     </div>
+    </>
   );
 }
 
